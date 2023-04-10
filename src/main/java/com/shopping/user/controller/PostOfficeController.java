@@ -1,7 +1,7 @@
 package com.shopping.user.controller;
 
 import java.awt.PageAttributes.MediaType;
-
+import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -61,8 +61,6 @@ public class PostOfficeController {
    return postOfficeServiceImpl.fetchPostOfficeDetailsByCity(cityName);
    
    }
-   @Autowired
-	PostDivisionDetails postDetailsService;
   
   /*
    * @RequestParam String cityName
@@ -70,10 +68,10 @@ public class PostOfficeController {
    */
   @GetMapping(value = "/getCity")
   
-  public ResponseEntity<PostOfficeResponse[]> getPostal(@RequestParam("cityname") String cityName) {
+  public List<PostDivisionDetails> getPostal(@RequestParam("cityname") String cityName) {
 	   logger.info("The City Name in getPostalCity is {}", cityName);
       //return ResponseEntity.status(HttpStatus.OK).body(postOfficeServiceImpl.fetchPostOfficeDetailsByCity(cityName));
-  return postDetailsService.fetchdivisionnameByCity(cityName);
+  return postOfficeServiceImpl.fetchDivisionDetailsByCity(cityName);
 
 }
 }

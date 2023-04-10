@@ -9,8 +9,7 @@ import com.shopping.user.serviceimpl.PostDivisionDetails;
 
 public interface PostService {
 	public ResponseEntity<PostOfficeResponse[]> fetchPostOfficeDetailsByCity(String cityname);
-
-	List<PostDivisionDetails> fetchdivisionDetailsByCity(String cityValue);
+	List<PostDivisionDetails> fetchDivisionDetailsByCity(String cityValue);
 }
 
 
