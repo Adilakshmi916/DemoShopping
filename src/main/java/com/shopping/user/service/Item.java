@@ -1,0 +1,31 @@
+package com.shopping.user.service;
+
+public class Item {
+	private int itemNo;
+	private String itemDesc;
+	private float itemprice;
+	public Item(int itemNo,String itemDesc,float itemprice) {
+		super();
+		this.itemNo=itemNo;
+		this.itemDesc=itemDesc;
+		this.itemprice=itemprice;
+		}
+	public int getItemNo() {
+		return itemNo;
+	}
+public void setItemNo(int itemNo) {
+	this.itemNo=itemNo;
+}
+public String getItemDesc() {
+	return itemDesc;
+}
+public void setItemDesc(String itemDesc) {
+	this.itemDesc=itemDesc;
+}
+public float getItemprice() {
+	return itemprice;
+}
+public void setItemNo(float itemprice) {
+	this.itemprice=itemprice;
+}
+}
