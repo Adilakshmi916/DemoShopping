@@ -57,7 +57,10 @@ public class PostOfficeServiceImpl implements PostService {
 //				System.out.println(prob.getName()+"***"+prob.getCountry()+"***"+prob.getPincode());
 //			}
 //		}
-		System.out.println("Hii Laxmi");
+		
+		for (int i=0; i<2;i++) {
+			System.out.println("Hii Laxmi" + i);
+		}
         return postalResponseEntity;
 		
 
